@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Praca_dyplomowa</AssemblyName>
+    <Name>Praca_dyplomowa</Name>
+    <RootNamespace>Praca_dyplomowa</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.snap</avrtool>
+    <avrtoolserialnumber>BUR204482320</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9502</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_snap>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>125000</IspClock>
+          <JtagDbgClock>200000</JtagDbgClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.snap</ToolType>
+      <ToolNumber>BUR204482320</ToolNumber>
+      <ToolName>MPLAB® Snap</ToolName>
+    </com_atmel_avrdbg_tool_snap>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <avrtoolinterfaceclock>200000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=11059200</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32a -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=11059200</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+            <Value>..</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>..</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.LibrarySearchPaths>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.7.374\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="1Wire\crc8.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="1Wire\crc8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="1Wire\ds18x20.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="1Wire\ds18x20.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="1Wire\onewire.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="1Wire\onewire.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="7_LED\7_led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="7_LED\7_led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2C_TWI\i2c_twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2C_TWI\i2c_twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IR_DECODE\ir_decode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IR_DECODE\ir_decode.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\lcd44780.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD\lcd44780.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MKUART\mkuart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MKUART\mkuart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_bmp180.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_bmp180.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_bmp280.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_bmp280.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_hih6131.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_hih6131.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_i2c.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_pressure.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MK_PRESSURE_HUMIDITY_LIB\mk_pressure_cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\font.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\font.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\i2c.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OLED\lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".settings\de.innot.avreclipse.core.prefs">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\main.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\main.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\makedep.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Debug\Praca_dyplomowa.map">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Praca_dyplomowa.componentinfo.xml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\19_test.eep">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\19_test.elf">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\19_test.hex">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\19_test.lss">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\19_test.map">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\crc8.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\crc8.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\ds18x20.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\ds18x20.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\onewire.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\onewire.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\1Wire\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\d_led.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\d_led.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\I2C_TWI\i2c_twi.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\I2C_TWI\i2c_twi.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\I2C_TWI\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\IR_DECODE\ir_decode.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\IR_DECODE\ir_decode.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\IR_DECODE\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\LCD\lcd44780.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\LCD\lcd44780.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\LCD\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\main.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\main.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\makedep.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\MKUART\mkuart.d">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\MKUART\mkuart.o">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\MKUART\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\objects.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\Praca_dyplomowa.map">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\sources.mk">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Release\subdir.mk">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".settings\" />
+    <Folder Include="1Wire\" />
+    <Folder Include="Debug\" />
+    <Folder Include="I2C_TWI\" />
+    <Folder Include="IR_DECODE\" />
+    <Folder Include="MKUART\" />
+    <Folder Include="7_LED" />
+    <Folder Include="MK_PRESSURE_HUMIDITY_LIB" />
+    <Folder Include="LCD" />
+    <Folder Include="OLED" />
+    <Folder Include="Release\" />
+    <Folder Include="Release\1Wire\" />
+    <Folder Include="Release\I2C_TWI\" />
+    <Folder Include="Release\IR_DECODE\" />
+    <Folder Include="Release\LCD\" />
+    <Folder Include="Release\MKUART\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
